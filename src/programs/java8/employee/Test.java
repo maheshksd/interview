@@ -70,6 +70,12 @@ public class Test
         if(average.isPresent())
             System.out.println(average.getAsDouble());
 
+        //Example-10
+        employeeList.sort(Comparator.comparing(Employee::getAge).reversed());
+
+        //Example-11, Sort by age and Name
+        employeeList.sort(Comparator.comparing(Employee::getAge).reversed().thenComparing(Employee::getName).reversed());
+        System.out.println(employeeList);
 
     }
 }
