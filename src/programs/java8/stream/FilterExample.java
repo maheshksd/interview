@@ -3,6 +3,8 @@ package programs.java8.stream;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 public class FilterExample {
     public static void main(String[] args)
     {
@@ -27,6 +29,28 @@ public class FilterExample {
                 .map(w->w.split("")) //Stream<String[]>
                 .flatMap(Arrays::stream)//Strem<String>
         .distinct().forEach(System.out::print);
+
+        //Example-5 Make pair -> 1,3 1,4 etc.
+        List<Integer> numbers1 = Arrays.asList(1, 2, 3);
+        List<Integer> numbers2 = Arrays.asList(3, 4);
+        List<int[]> pairs1 =
+                numbers1.stream()
+                        .flatMap(i -> numbers2.stream()
+                                .map(j -> new int[]{i, j})
+                        )
+                        .collect(toList());
+        System.out.println(pairs1);
+
+        //Example-6 pair with sum divisible by 3
+        List<Integer> numbers3 = Arrays.asList(1, 2, 3);
+        List<Integer> numbers4 = Arrays.asList(3, 4);
+        List<int[]> pairs2 =
+                numbers3.stream()
+                        .flatMap(i -> numbers4.stream().filter(j->(i+j)%3==0)
+                                .map(j -> new int[]{i, j})
+                        )
+                        .collect(toList());
+        System.out.println(pairs2);
 
     }
 }

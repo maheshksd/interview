@@ -1,3 +1,19 @@
 1. Intermediate operations don’t perform any processing until a terminal operation is invoked on the stream
 pipeline—they’re lazy
 2. Limit operation technique called short-circuiting
+
+Match
+=====
+1. anyMatch
+if(menu.stream().anyMatch(Dish::isVegetarian)){
+System.out.println("The menu is (somewhat) vegetarian friendly!!");
+}
+
+2. allMatch
+boolean isHealthy = menu.stream().allMatch(d -> d.getCalories() < 1000);
+
+3. noneMatch
+boolean isHealthy = menu.stream().noneMatch(d -> d.getCalories() >= 1000);
+
+4. findAny -> Any random value
+menu.stream().filter(Dish::isVegetarian).findAny();
