@@ -13,7 +13,7 @@ public class FilterExample {
         numbers.stream()
                 .filter(i -> i % 2 == 0)
                 .distinct()
-                .forEach(System.out::println);
+                .forEach(System.out::print);
 
         //Example-2 Limit
         numbers = Arrays.asList(10, 20, 10, 30, 30, 20, 40);

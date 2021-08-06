@@ -1,0 +1,2 @@
+1)@Controller -  @ResponseBody is mandatory
+2)@RestController -  No need to have @ResponseBody

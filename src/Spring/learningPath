@@ -1,0 +1,15 @@
+A. Spring Core
+1) Spring DI Concepts
+2) Spring IOC Containers ( BeanFactory, ApplicationContext )
+3) AOP
+4) Bean Scopes
+5) Annotations
+6) Life Cycle Callbacks
+7) Bean configuration styles ( XML, Annotations, @Beans)
+8) jdbcTemplate, jmsTemplate
+
+9) Spring boot and spring cloud
+10) Spring boot Actuator
+11) Logging
+12) Profiling
+13) Dev tools

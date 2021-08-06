@@ -1,6 +1,7 @@
 package programs.java8.employee;
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Test
@@ -76,6 +77,10 @@ public class Test
         //Example-11, Sort by age and Name
         employeeList.sort(Comparator.comparing(Employee::getAge).reversed().thenComparing(Employee::getName).reversed());
         System.out.println(employeeList);
+
+        //Example-12, Partition
+        Predicate<Employee> isAgeGreaterThan25 = (Employee employee1)-> employee1.getAge() > 25;
+        Map<Boolean,List<Employee>> resultMap = employeeList.stream().collect(Collectors.partitioningBy(isAgeGreaterThan25));
 
     }
 }
