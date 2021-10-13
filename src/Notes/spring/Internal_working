@@ -1,0 +1,2 @@
+1) Spring uses service-locator-pattern design pattern
+2) In Spring, “Autowiring by AutoDetect“, means chooses “autowire by constructor” if default constructor (argument with any data type), otherwise uses “autowire by type“
