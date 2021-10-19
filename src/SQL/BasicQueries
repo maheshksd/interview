@@ -1,0 +1,5 @@
+1) Write an SQL query to fetch the departments that have less than five people in it.
+SELECT DEPARTMENT, COUNT(WORKER_ID) as 'Number of Workers' FROM Worker
+                    GROUP BY DEPARTMENT HAVING COUNT(WORKER_ID) < 5;
+2)  Write an SQL query to show all departments along with the number of people in there
+SELECT DEPARTMENT, COUNT(DEPARTMENT) as 'Number of Workers' FROM Worker GROUP BY DEPARTMENT;
