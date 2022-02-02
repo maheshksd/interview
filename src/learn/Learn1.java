@@ -1,14 +1,21 @@
 package learn;
 
-import javax.swing.*;
+import java.util.Scanner;
 
 public class Learn1 {
     public static void main(String[] args)
     {
-        String s="abcde";
-        int index = s.indexOf('c');
-        System.out.println(index);
-        System.out.println(s.substring(0,index));
-        System.out.println(s.substring(index+1,s.length()));
+        Scanner scanner=new Scanner(System.in);
+
+        System.out.println("Enter your first number: ");
+        int a  = scanner.nextInt();
+
+        System.out.println("Enter your second number: ");
+        int b  = scanner.nextInt();
+
+        int sum= a+b;
+
+        System.out.println("Sum= "+ sum );
+
     }
 }
